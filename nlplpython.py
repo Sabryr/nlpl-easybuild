@@ -1,9 +1,13 @@
 ##
+# Using ConfigureMakePythonPackage as the template
 # You should have received a copy of the GNU General Public License
 # along with EasyBuild.  If not, see <http://www.gnu.org/licenses/>.
 ##
 """
 EasyBuild support for Python packages that are configured with 'python configure/make/make install', implemented as an easyblock
+
+@author:  Sabry Razick (University of Oslo)
+
 
 """
 from easybuild.easyblocks.generic.configuremake import ConfigureMake
