@@ -1,0 +1,33 @@
+#sabryr 09-04-2020
+
+This is an effort to use EasyBuild as the installation method for NLPL modules. There are 
+different easybuild setup on different systems. To list the configurations
+
+´´´
+eb --show-config 
+´´´
+
+To use the same procedure across different systems we are going to use a custom instructions
+so things will end up in exactly you want and do not modified anything centrally installed.
+To prepare directories and get the path settings run the following command
+
+´´´
+setdir.sh
+´´´
+
+The above script will print the MODULEPATH to set and the eb robot path to issue.
+
+The current version do not perform the sanity check so the software need to be verified to
+be working manually.
+
+## efmaral
+efmaral/1.0.0-foss-2018b-Python-3.6.6 is the first module to test. This uses a generic 
+easyblock called “nlplpython.py”. The reason for using own easyblock is that the package
+efmaral fails sanity check due to failing “import efmaral”. As the usage is through an 
+egg or an executable. A sanity check will be added to this.
+
+The easybuild file fmaral-1.0.0-2019.03-foss-2018b-Python-3.6.6.eb uses this nlplpython.py easyblock.
+
+
+ 
+
