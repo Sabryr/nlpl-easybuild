@@ -1,0 +1,58 @@
+#sabryr 07-04-2020
+
+#easyblock = 'nlplpython'
+easyblock = 'PythonPackage'
+
+name = 'efmaral'
+version = '1.0.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'A'
+description = "B"
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+source_urls = ['https://github.com/robertostling/eflomal/archive/']
+sources = ['v%(version)s.tar.gz']
+checksums = ['d8c63af02cd5d6c3ab678d681ed6e8d7f4456f1a54b5514a9b827ab70373b271']
+
+# -e INSTALLDIR
+
+dependencies = [
+    ('Python', '3.6.6'),
+]
+
+
+#install_cmd = 'make install -e INSTALLDIR=%(installdir)s/ ;python3 setup.py install --prefix %(installdir)s'
+
+#/cluster/work/support/easybuild/efmaral/1.0.0-foss-2018b-Python-3.6.6/lib/python3.6/site-packages/
+
+#modextrapaths = {'PYTHONPATH': 'lib/python%(pyshortver)s/eflomal-1.0.0/install/lib/python3.6/site-packages'}
+
+#buildcmd = 'install --prefix %(installdir)s '
+#buildcmd = 'make install -e INSTALLDIR=%(installdir)s/ '
+#install_cmd= 'echo $PYTHONPATH; '
+#install_cmd+= 'python3 setup.py install --prefix %(installdir)s'
+#install_cmd = 'make install -e INSTALLDIR=%(installdir)s/ '
+#buildcmd='install --prefix %(installdir)s'
+
+#install_cmd= 'python3 setup.py install'
+
+install_target = 'install'
+
+#modextrapaths = {'PYTHONPATH': 'lib/python%(pyshortver)s/lib/python3.6/site-packages'}
+
+
+options = {'modulename': 'efmaral'}
+
+#sanity_check_paths = {
+#    'files': [],
+#    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+#}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/%(name)s-%(version)s-py%(pyshortver)s.egg'],
+}
+
+moduleclass = 'lang'
