@@ -1,0 +1,32 @@
+#easyblock = 'nlplpython'
+easyblock = 'PythonPackage'
+
+name = 'nltk'
+version = '3.4.5'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'http://www.nltk.org/'
+description = "NLTK is a leading platform for building Python programs to work with human language data."
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+#SOURCE_ZIP 	Source .zip bundle 	%(name)s-%(version)s.zip
+
+source_urls = [PYPI_LOWER_SOURCE]
+sources = [SOURCE_ZIP]
+#checksums = ['']
+
+dependencies = [('Python', '3.5.2')]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+postinstallcmds = [(
+  'python -m nltk.downloader -d %(installdir)s/nltk_data all'
+)]
+
+modextrapaths = {'PATH': ['NLTK_DATA']}
+
+moduleclass = 'data'
