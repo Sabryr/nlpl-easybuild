@@ -30,4 +30,11 @@ The easybuild file fmaral-1.0.0-2019.03-foss-2018b-Python-3.6.6.eb uses this nlp
 
 
  
+##To access, test installation on saga.sigma2.no
 
+export MODULEPATH=/cluster/work/support/easybuild/modules/all:$MODULEPATH
+Then use :
+module avail <module name>
+
+e.g.
+module avail nltk/3.4.5-foss-2016b-Python-3.5.2
