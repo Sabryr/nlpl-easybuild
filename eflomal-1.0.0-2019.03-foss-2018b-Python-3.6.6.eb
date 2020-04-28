@@ -1,0 +1,32 @@
+#sabryr 07-04-2020
+
+easyblock = 'nlplpython'
+
+
+name = 'eflomal'
+version = '1.0.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'A'
+description = "B"
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+source_urls = ['https://github.com/robertostling/eflomal/archive/']
+sources = ['v%(version)s.tar.gz']
+checksums = ['d8c63af02cd5d6c3ab678d681ed6e8d7f4456f1a54b5514a9b827ab70373b271']
+
+dependencies = [
+    ('Python', '3.6.6'),
+]
+
+install_target = 'develop'
+
+install_cmd = 'make install -e INSTALLDIR=%(installdir)s/ '
+
+modextrapaths = {'PATH': ['bin', 'bin/..']}
+
+options = {'modulename': 'eflomal'}
+
+
+moduleclass = 'lang'

@@ -1,0 +1,31 @@
+#sabryr 07-04-2020
+
+
+easyblock = 'PythonPackage'
+
+name = 'efmaral'
+version = '1.0.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'A'
+description = "B"
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+source_urls = ['https://github.com/robertostling/efmaral/archive/']
+sources = ['v%(version)s.tar.gz']
+checksums = ['bf7f35ca21f89bca42347af9bce26f912635cc6f2ee48d80290b9e1924160917']
+
+dependencies = [
+    ('Python', '3.6.6'),
+]
+
+install_target = 'develop'
+
+modextrapaths = {'PATH': ['bin', 'bin/..']}
+
+options = {'modulename': 'efmaral'}
+
+
+
+moduleclass = 'lang'
