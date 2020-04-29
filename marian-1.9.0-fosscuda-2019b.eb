@@ -1,0 +1,34 @@
+#sdrobac 23-04-2020
+
+easyblock = 'CMakeMake'
+
+name = 'marian-nmt'
+version = '1.9.0'
+
+homepage = 'A'
+description = "B"
+
+#toolchain = {'name': 'gcccuda', 'version': '2019b'}
+toolchain = {'name': 'fosscuda', 'version': '2019b'}
+
+source_urls = ['https://github.com/marian-nmt/marian/archive/']
+sources = ['%(version)s.tar.gz']
+checksums = ['e400a6fe16bf8532e412fdb86faddbce428bddd3f29b5c77179a9f40fb51ee47']
+
+
+
+modextrapaths = {'PATH': ['bin', 'bin/..']}
+
+builddependencies = [
+    ('CMake', '3.15.3'),
+]
+
+skipsteps = ['install']
+
+
+options = {'modulename': 'marian-nmt'}
+
+
+
+moduleclass = 'lang'
+
