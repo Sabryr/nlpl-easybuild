@@ -1,7 +1,7 @@
 #sabryr 07-04-2020
 
-easyblock = 'nlplpython'
-
+#easyblock = 'nlplpython'
+easyblock = 'PythonPackage'
 
 name = 'eflomal'
 version = '1.0.0'
@@ -22,11 +22,15 @@ dependencies = [
 
 install_target = 'develop'
 
-install_cmd = 'make install -e INSTALLDIR=%(installdir)s/ '
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
 
 modextrapaths = {'PATH': ['bin', 'bin/..']}
 
-options = {'modulename': 'eflomal'}
+#options = {'modulename': 'efmaral'}
+
 
 
 moduleclass = 'lang'
