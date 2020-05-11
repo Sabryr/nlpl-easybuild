@@ -2,7 +2,7 @@ easyblock = 'PythonPackage'
 
 name = 'numpy'
 version = '1.18.1'
-versionsuffix = '-Python-%(pyver)s'
+versionsuffix = '-Python-3.7.2'
 
 homepage = 'http://www.numpy.org'
 description = """NumPy is the fundamental package for scientific computing with Python. It contains among other things:
@@ -20,7 +20,14 @@ checksums = [
 ]
 
 dependencies = [
-    ('Cython', '0.29.13', '-Python-3.7.2.eb'),
+   ('Cython', '0.29.17', '-Python-3.7.2'),
 ]
+
+#Todo Construct the following using variables
+local_numpy_dir = 'lib/python3.7/site-packages/numpy-1.18.1-py3.7-linux-x86_64.egg'
+sanity_check_paths = {
+    'files': ['bin/f2py', 'bin/f2py3', 'bin/f2py3.7'],
+    'dirs': [local_numpy_dir + '/numpy']
+}
 
 moduleclass = 'math'
