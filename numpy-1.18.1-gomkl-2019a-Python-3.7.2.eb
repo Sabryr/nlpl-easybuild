@@ -1,0 +1,26 @@
+easyblock = 'PythonPackage'
+
+name = 'numpy'
+version = '1.18.1'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'http://www.numpy.org'
+description = """NumPy is the fundamental package for scientific computing with Python. It contains among other things:
+ a powerful N-dimensional array object, sophisticated (broadcasting) functions, tools for integrating C/C++ and Fortran
+ code, useful linear algebra, Fourier transform, and random number capabilities. Besides its obvious scientific uses,
+ NumPy can also be used as an efficient multi-dimensional container of generic data. Arbitrary data-types can be 
+ defined. This allows NumPy to seamlessly and speedily integrate with a wide variety of databases."""
+
+toolchain = {'name': 'gomkl', 'version': '2019a'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_ZIP]
+checksums = [
+    'b6ff59cee96b454516e47e7721098e6ceebef435e3e21ac2d6c3b8b02628eb77',  # numpy-1.18.1.zip
+]
+
+dependencies = [
+    ('Cython', '0.29.13', '-Python-3.7.2.eb'),
+]
+
+moduleclass = 'math'
