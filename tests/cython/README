@@ -1,0 +1,5 @@
+#sabryr 12-05-2020
+
+Run the following command in the current directory to see what are the compiler options used
+
+python setup.py build_ext --inplace
