@@ -43,6 +43,7 @@ echo "   --repositorypath=$repositorypath  \ "  >> SETUP.local
 echo "   --tmp-logdir=$tmp_logdir \ "  >> SETUP.local
 echo "   --sourcepath=$source_path \ "  >> SETUP.local
 echo "   --tmpdir=$tmpdir  \ "  >> SETUP.local
+echo "   --include-easyblocks=$include_easyblocks \ "  >> SETUP.local
 echo "   --robot $(pwd): <EASYBUILD-FILE> "  >> SETUP.local
 
 echo "Local setup saved in SETUP.local"
